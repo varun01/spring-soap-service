@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/xml/getuser"
+ targetNamespace="http://www.example.com/xml/getuser" elementFormDefault="qualified">
+
+
+    <xs:element name="GetUserProfileRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="userId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetUserProfileResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GetUserProfile" type="tns:GetUserProfile"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="GetUserProfile">
+        <xs:sequence>
+            <xs:element name="userId" type="xs:int"/>
+            <xs:element name="userName" type="xs:string"/>
+            <xs:element name="userStatus" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

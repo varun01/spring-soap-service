@@ -1,9 +1,10 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.howtodoinjava.com/xml/school"
- targetNamespace="http://www.howtodoinjava.com/xml/school" elementFormDefault="qualified">
+<!-- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.howtodoinjava.com/xml/school"
+ targetNamespace="http://www.howtodoinjava.com/xml/school" elementFormDefault="qualified"> -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/xml/newuser"
+ targetNamespace="http://www.example.com/xml/newuser" elementFormDefault="qualified">
 
 
-
-    <xs:element name="UserProfileRequest">
+    <xs:element name="NewUserProfileRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="userId" type="xs:int"/>
@@ -13,14 +14,14 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="UserProfileResponse">
+    <xs:element name="NewUserProfileResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="UserProfile" type="tns:UserProfile"/>
+                <xs:element name="response" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
+    
     <xs:complexType name="UserProfile">
         <xs:sequence>
             <xs:element name="userId" type="xs:int"/>
